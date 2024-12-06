@@ -1,0 +1,110 @@
+html, body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    text-align: center;
+    background: #f7f7f7;
+    height: 100%;
+}
+
+#widget-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 300px;
+    box-sizing: border-box;
+    position: relative;
+    text-align: center;
+}
+
+.text-display {
+    font-size: 18px;
+    font-weight: bold;
+    margin: 20px;
+    white-space: pre;
+    text-align: center;
+    display: inline-block;
+}
+
+/* SPINNER */
+.spinner-wrapper {
+    position: relative;
+    width: 60px;
+    height: 60px;
+    margin-bottom: 10px;
+}
+
+.spinner-wrapper svg {
+    width: 60px;
+    height: 60px;
+}
+
+.spinner-circle {
+    transform-origin: center;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    100% { transform: rotate(360deg); }
+}
+
+/* LOADBAR */
+.loadbar-container {
+    width: 80%;
+    background: #ccc;
+    border-radius: 5px;
+    overflow: hidden;
+    margin: 20px auto;
+    height: 20px;
+    position: relative;
+    transition: background-color 0.5s ease;
+}
+
+.loadbar-fill {
+    height: 100%;
+    width: 0%;
+    transition: width linear;
+}
+
+/* Checkmark animation */
+.checkmark {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  display: inline-block;
+  border: 4px solid #28a745; /* green border */
+  box-sizing: border-box;
+  margin-bottom: 10px;
+  opacity: 0;
+  transition: opacity 0.5s ease;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 2;
+}
+
+.checkmark.show {
+  opacity: 1;
+}
+
+.checkmark::after {
+  content: "";
+  position: absolute;
+  width: 10px;
+  height: 20px;
+  border-right: 4px solid #28a745;
+  border-bottom: 4px solid #28a745;
+  transform: rotate(45deg);
+  top: 5px;
+  left: 16px;
+  opacity: 0;
+  animation: checkmark 0.5s ease-in-out forwards 0.5s;
+}
+
+@keyframes checkmark {
+  to {
+    opacity: 1;
+  }
+}
