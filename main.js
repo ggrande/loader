@@ -3,14 +3,14 @@ document.addEventListener("DOMContentLoaded", function() {
     const isJotformEnv = (typeof JFCustomWidget !== "undefined" && JFCustomWidget.getWidgetSetting);
 
     // Fallback values if JFCustomWidget is not available or setting is missing
-    let type = "spinner";
-    let time = 5000;
-    let ellipsesEnabled = true;
-    let primaryColor = "#3498db";
-    let redirect = false;
-    let redirectPage = "";
-    let redirectTargetAttr = "self";
-    let texts = ["Loading your data.", "Almost there...", "Just a moment."];
+    // let type = "spinner";
+    //let time = 5000;
+    //let ellipsesEnabled = true;
+    //let primaryColor = "#3498db";
+    //let redirect = false;
+    //let redirectPage = "";
+    //let redirectTargetAttr = "self";
+    //let texts = ["Loading your data.", "Almost there...", "Just a moment."];
 
     if (isJotformEnv) {
         // Override with JFCustomWidget settings if available
