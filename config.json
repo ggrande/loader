@@ -1,0 +1,54 @@
+{
+  "name": "Loaders, Spinners & Text",
+  "description": "Show a loader with spinner, loadbar, or text and ellipses cycling before completing or redirecting.",
+  "version": "1.0",
+  "properties": {
+    "type": {
+      "type": "string",
+      "title": "Loader Type",
+      "description": "spinner, loadbar, or textonly",
+      "default": "spinner"
+    },
+    "time": {
+      "type": "integer",
+      "title": "Length (ms)",
+      "description": "Total duration in milliseconds",
+      "default": 5000
+    },
+    "texts": {
+      "type": "string",
+      "title": "Texts (JSON array)",
+      "description": "e.g. [\"Loading your data.\", \"Almost there...\"]",
+      "default": "[\"Loading your data.\", \"Almost there...\", \"Just a moment.\"]"
+    },
+    "ellipses": {
+      "type": "boolean",
+      "title": "Show Ellipses?",
+      "description": "true or false",
+      "default": true
+    },
+    "color": {
+      "type": "string",
+      "title": "Primary Color",
+      "default": "#3498db"
+    },
+    "redirect": {
+      "type": "boolean",
+      "title": "Redirect",
+      "description": "If true, redirect after completion.",
+      "default": false
+    },
+    "redirectPage": {
+      "type": "string",
+      "title": "Redirect Page URL",
+      "description": "If blank and redirect=true, goes to next Jotform page",
+      "default": ""
+    },
+    "redirectTarget": {
+      "type": "string",
+      "title": "Redirect Target",
+      "description": "self | blank | top",
+      "default": "self"
+    }
+  }
+}
